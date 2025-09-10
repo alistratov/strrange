@@ -36,7 +36,7 @@ It attempts to “guess” the progression by analyzing numeric parts, repeated 
 
 ⚠️ **Alpha version:** algorithms are heuristic and may change.
 
-If you encounter results that seem unexpected, please share examples or — even if they won’t always lead to changes (what is unexpected for one user may be the intended logic for another), they help us understand real-world cases.
+If you encounter results that seem unexpected, please share examples — even if they won’t always lead to changes (what is unexpected for one user may be the intended logic for another), they help us understand real-world cases.
 
 Examples are welcome as issue reports or pull requests.
 

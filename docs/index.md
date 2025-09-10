@@ -26,9 +26,9 @@ print(list('AA' + srange('QM', 'QZ') + srange('XA', 'XZ') + 'ZZ'))
 ## Description
 The main function is `strrange.range(start: str, stop: str)`, which generates strings from `start` to `stop`, inclusive.
 
- - The function attempts to “guess” the progression by analyzing numeric parts, repeated substrings, and alphanumeric regions (0–9 A–Z a–z).
+ - The function attempts to “guess” the progression by analyzing numeric parts, repeated substrings, and alphanumeric regions (`0–9 A–Z a–z`).
  - If start and stop share a common prefix or suffix, it is preserved where possible.
- - If an integer is detected in the pattern and it begins with `0` or a space, the generated numbers are padded accordingly 
+ - If an integer is detected in the pattern, and it begins with `0` or a space, the generated numbers are padded accordingly .
  - If stop is less than start (in some alphabet or as numbers), the sequence is generated in reverse (from stop to start).
  - If both start and stop are empty strings, the result is an empty sequence.
  - If start and stop are equal, the result contains exactly one element.
@@ -46,7 +46,7 @@ list(srange('1_000.png', '+1002.png'))
 # ['1000.png', '1001.png', '1002.png']
 ```
 
-Ambiguities are inevitable: the algorithm is “magical” in the sense that it tries to guess the intended sequence, but sometimes this magic does not work. For example, after the sequence `"A8", "A9"` should the next element be `"AA"`, `"A10"`, `"BA"`, or `"B0"`?
+Ambiguities are inevitable: the algorithm is “magical” in the sense that it tries to guess the intended sequence, but sometimes this magic does not work. For example, after the sequence `'A8', 'A9'` should the next element be `'AA'`, `'A10'`, `'BA'`, or `'B0'`?
 
 For fine-grained control, you may use the underlying [Alphabet](alphabet.md) class.
 
@@ -58,6 +58,6 @@ Actually, `strrange.range` returns not a plain generator, but a special range ob
 
 This allows you to build composite sequences easily.
 
-The development status is **alpha**; algorithms are heuristic and may change. If you encounter results that seem unexpected, please share examples or — even if they won’t always lead to changes (what is unexpected for one user may be the intended logic for another), they help us understand real-world cases. 
+The development status is **alpha**; algorithms are heuristic and may change. If you encounter results that seem unexpected, please share examples — even if they won’t always lead to changes (what is unexpected for one user may be the intended logic for another), they help us understand real-world cases. 
 
 Examples are welcome as issue reports or pull requests.
