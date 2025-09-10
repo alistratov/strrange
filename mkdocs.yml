@@ -1,0 +1,16 @@
+site_name: strrange
+site_author: Oleh Alistratov
+repo_url: https://github.com/alistratov/strrange
+edit_uri: blob/main/docs/
+
+nav:
+  - Overview: index.md
+  - Alphabet: alphabet.md
+  - License: license.md
+
+theme: readthedocs
+
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: "#"

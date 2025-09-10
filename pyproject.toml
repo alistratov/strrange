@@ -1,0 +1,50 @@
+[project]
+name = "strrange"
+version = "0.1"
+authors = [
+  { name="Oleh Alistratov", email="alistratov.dev@gmail.com" },
+]
+description = "Generate inclusive lexicographic ranges of strings"
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/alistratov/bit-permutation"
+Issues = "https://github.com/alistratov/bit-permutation/issues"
+Documentation = "https://bit-permutation.readthedocs.io/en/latest/"
+
+[build-system]
+requires = ["flit_core>=3.4"]
+build-backend = "flit_core.buildapi"
+
+[tool.poetry]
+name = "strrange"
+version = "0.1"
+description = "Generate inclusive lexicographic ranges of strings"
+authors = ["Oleh Alistratov <alistratov.dev@gmail.com>"]
+license = "Apache-2.0"
+readme = "README.md"
+
+[tool.ruff]
+exclude = [
+    "dist",
+    "docs",
+    ".git",
+    ".github",
+    ".mypy_cache",
+    ".pytest_cache",
+    ".ruff_cache",
+    ".idea",
+]
+
+line-length = 120
+indent-width = 4
+
+[tool.ruff.lint]
+ignore = []
