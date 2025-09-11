@@ -22,8 +22,8 @@ class Alphabet:
     ALPHABET_UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
     CACHE: dict[int, 'Alphabet'] = {}
-    # _CACHE_LOCK = threading.Lock()
 
+    # _CACHE_LOCK = threading.Lock()
     # Thread-safety note:
     # We don’t lock around CACHE because in CPython dict get/set are atomic under the GIL.
     # The “check-then-set” isn’t atomic, so two threads might build the same Alphabet once,
@@ -54,7 +54,6 @@ class Alphabet:
             abc += cls.ALPHABET_LOWER
         assert abc != ''
         rv = cls(alphabet=abc)
-        # with cls._CACHE_LOCK:
         cls.CACHE[sym_class] = rv
         return rv
 
