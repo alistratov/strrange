@@ -28,7 +28,7 @@ The main function is `strrange.range(start: str, stop: str)`, which generates st
 
  - The function attempts to “guess” the progression by analyzing numeric parts, repeated substrings, and alphanumeric regions (`0–9 A–Z a–z`).
  - If start and stop share a common prefix or suffix, it is preserved where possible.
- - If an integer is detected in the pattern, and it begins with `0` or a space, the generated numbers are padded accordingly .
+ - If an integer is detected in the pattern, and it begins with `0` or a space, the generated numbers are padded accordingly.
  - If stop is less than start (in some alphabet or as numbers), the sequence is generated in reverse (from stop to start).
  - If both start and stop are empty strings, the result is an empty sequence.
  - If start and stop are equal, the result contains exactly one element.
