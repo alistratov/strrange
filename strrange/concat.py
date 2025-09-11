@@ -13,9 +13,6 @@ __all__ = [
 
 
 class StrRange(Iterable[str]):
-    """
-    Concatenable string range generator.
-    """
     def __init__(self, start: str, stop: str) -> None:
         self.start = start
         self.stop = stop
@@ -38,12 +35,6 @@ class StrRange(Iterable[str]):
         y._before = before
         y._after = after
         return y
-
-    # def __str__(self) -> str:
-    #     return f"StrRange({self.start}, {self.stop})"
-
-    # def __repr__(self) -> str:
-    #     return f"StrRange({self.start!r}, {self.stop!r})"
 
     def __iter__(self) -> Iterator[str]:
         if self._before is not None:
@@ -69,10 +60,3 @@ class StrRange(Iterable[str]):
             before=chain(it, self._before or ()),
             after=self._after,
         )
-
-    # def __iadd__(self, other):
-    #     it = self._as_iterable(other)
-    #     if it is None:
-    #         return NotImplemented
-    #     self._after = chain(self._after or (), it)
-    #     return self
